@@ -1,0 +1,12 @@
+version: '1'
+
+services:
+  web:
+    build: .
+    container_name: enterra-test
+    ports:
+      - "8000:8000"
+    command: bash -c 'uvicorn main:app --host 0.0.0.0'
+    volumes:
+      - ./app:/test_app
+      -
